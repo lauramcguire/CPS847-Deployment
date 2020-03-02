@@ -1,0 +1,19 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.3"
+
+install:
+  - pip install codecov
+  - pip install coverage
+
+script:
+  - python -m unittest discover -v ./ci_play/
+  - coverage run ./ci_play/test.py
+
+after_success:
+  - codecov --token="YOUR TOKEN HERE"
+
+deploy:
+  pro
