@@ -16,4 +16,3 @@ after_success:
   - codecov --token="YOUR TOKEN HERE"
 
 deploy:
-  pro
